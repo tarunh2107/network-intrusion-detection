@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="10" y="10" width="740" height="500" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Header -->
+  <text x="35" y="48" font-size="20" font-weight="700" fill="#0f172a">CICIDS2017 Held-Out Test Evaluation</text>
+  <text x="35" y="74" font-size="13" font-weight="400" fill="#64748b">Frozen Random Forest | Threshold = 0.29 | 416,144 Evaluated Flows</text>
+
+  <!-- Axis Headers -->
+  <text x="380" y="115" font-size="13" font-weight="600" fill="#475569" text-anchor="middle">PREDICTED CLASS</text>
+  <text x="250" y="138" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Predicted BENIGN (0)</text>
+  <text x="510" y="138" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Predicted ATTACK (1)</text>
+
+  <!-- Actual Class Vertical Label -->
+  <g transform="translate(45, 290) rotate(-90)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#475569" text-anchor="middle">ACTUAL CLASS</text>
+  </g>
+  <text x="95" y="215" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">Actual BENIGN (0)</text>
+  <text x="95" y="335" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">Actual ATTACK (1)</text>
+
+  <!-- Matrix Grid -->
+  <!-- Top-Left: True Negative -->
+  <rect x="130" y="150" width="240" height="115" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="145" y="178" font-size="13" font-weight="700" fill="#166534">TRUE NEGATIVE (TN)</text>
+  <text x="145" y="212" font-size="26" font-weight="800" fill="#14532d">338,616</text>
+  <text x="145" y="242" font-size="12" font-weight="500" fill="#15803d">Specificity: 99.81% (338616/339256)</text>
+
+  <!-- Top-Right: False Positive -->
+  <rect x="390" y="150" width="240" height="115" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="405" y="178" font-size="13" font-weight="700" fill="#991b1b">FALSE POSITIVE (FP)</text>
+  <text x="405" y="212" font-size="26" font-weight="800" fill="#7f1d1d">640</text>
+  <text x="405" y="242" font-size="12" font-weight="500" fill="#b91c1c">False Positive Rate: 0.1886% (640/339256)</text>
+
+  <!-- Bottom-Left: False Negative -->
+  <rect x="130" y="280" width="240" height="115" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="145" y="308" font-size="13" font-weight="700" fill="#9a3412">FALSE NEGATIVE (FN)</text>
+  <text x="145" y="342" font-size="26" font-weight="800" fill="#7c2d12">207</text>
+  <text x="145" y="372" font-size="12" font-weight="500" fill="#c2410c">Missed Attacks: 0.27% (207/76888)</text>
+
+  <!-- Bottom-Right: True Positive -->
+  <rect x="390" y="280" width="240" height="115" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="405" y="308" font-size="13" font-weight="700" fill="#1e40af">TRUE POSITIVE (TP)</text>
+  <text x="405" y="342" font-size="26" font-weight="800" fill="#1e3a8a">76,681</text>
+  <text x="405" y="372" font-size="12" font-weight="500" fill="#2563eb">Attack Recall: 99.73% (76681/76888)</text>
+
+  <!-- Footer Metrics Ribbon -->
+  <rect x="35" y="415" width="690" height="70" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="442" font-size="11" font-weight="600" fill="#64748b">ACCURACY</text>
+  <text x="60" y="468" font-size="16" font-weight="700" fill="#0f172a">99.7965%</text>
+
+  <text x="200" y="442" font-size="11" font-weight="600" fill="#64748b">ATTACK PRECISION</text>
+  <text x="200" y="468" font-size="16" font-weight="700" fill="#0f172a">99.1723%</text>
+
+  <text x="370" y="442" font-size="11" font-weight="600" fill="#64748b">ATTACK RECALL</text>
+  <text x="370" y="468" font-size="16" font-weight="700" fill="#0f172a">99.7308%</text>
+
+  <text x="520" y="442" font-size="11" font-weight="600" fill="#64748b">ATTACK F1-SCORE</text>
+  <text x="520" y="468" font-size="16" font-weight="700" fill="#0f172a">0.9945</text>
+
+  <text x="660" y="442" font-size="11" font-weight="600" fill="#64748b">FPR BUDGET</text>
+  <text x="660" y="468" font-size="16" font-weight="700" fill="#0f172a">&lt;= 0.20%</text>
+</svg>

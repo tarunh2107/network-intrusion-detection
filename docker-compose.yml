@@ -1,0 +1,74 @@
+# Docker Compose specification for NIDS Inference Backend & Monitoring Dashboard
+#
+# Operational Boundaries:
+# - Both services are published ONLY on host loopback (127.0.0.1), preventing external network exposure.
+# - Machine-learning model weights and evaluation reports are mounted strictly read-only (:ro).
+# - SQLite prediction history is stored in a dedicated named volume (nids_db_data).
+# - Non-root container execution (appuser, UID 1000).
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: nids-api
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - LOG_LEVEL=INFO
+      - MODEL_PATH=/app/models/baseline_v1/model.joblib
+      - FROZEN_CONFIG_PATH=/app/models/baseline_v1/frozen_evaluation_config.json
+      - DATABASE_PATH=/app/data/predictions.db
+    volumes:
+      # Named volume for persistent SQLite database
+      - nids_db_data:/app/data
+      # Read-only mount of verified model artifacts and metadata
+      - ./models/baseline_v1:/app/models/baseline_v1:ro
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - nids-net
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: nids-dashboard
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+      - EVALUATION_REPORT_PATH=/app/reports/generated/test_evaluation.json
+      - DEMO_CSV_PATH=/app/data/demo/example_flows.csv
+    volumes:
+      # Read-only mount of frozen evaluation report
+      - ./reports/generated/test_evaluation.json:/app/reports/generated/test_evaluation.json:ro
+      # Read-only mount of benchmark demo flows directory
+      - ./data/demo:/app/data/demo:ro
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - nids-net
+
+volumes:
+  nids_db_data:
+    name: nids_db_data
+
+networks:
+  nids-net:
+    driver: bridge

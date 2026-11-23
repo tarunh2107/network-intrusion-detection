@@ -1,0 +1,52 @@
+# Virtual environment
+.venv/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Raw and preprocessed bulk datasets (CICIDS2017)
+data/raw/
+data/processed/
+
+# Keep small benchmark demo assets tracked
+!data/demo/
+!data/demo/example_flows.csv
+!data/demo/example_flows_1000.csv
+
+# Large serialized model weights (preserve small metadata & frozen configs)
+models/**/*.joblib
+models/**/*.pkl
+models/**/*.skops
+models/*.joblib
+models/*.pkl
+models/*.skops
+
+# Generated temporary reports & test artifacts
+reports/generated/eval_cache/
+reports/generated/temp_*
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases & transaction logs
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite3
+
+# IDE and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,342 @@
+{
+  "timestamp_utc": "2026-10-12T19:08:03.561388+00:00",
+  "elapsed_seconds": 55.0,
+  "frozen_configuration": {
+    "model_path": "models/baseline_v1/model.joblib",
+    "model_sha256": "4339282ba6ce68b5c44c6dd6a72e7796e755a77542d65021984dd1a8b0434793",
+    "selected_threshold": 0.29,
+    "operating_rule": "Choose the threshold with highest validation ATTACK recall among thresholds with false-positive rate <= 0.2%. Break ties by higher precision, then higher threshold. (This is a project evaluation choice, not an industry standard or a guarantee about live networks.)"
+  },
+  "test_partition_summary": {
+    "total_rows": 416144,
+    "benign_rows": 339256,
+    "attack_rows": 76888
+  },
+  "metrics_at_frozen_threshold": {
+    "precision": 0.9917228178631937,
+    "recall": 0.997307772344189,
+    "f1_score": 0.9945074541693416,
+    "accuracy": 0.9979646468530124,
+    "fpr": 0.001886481005494376,
+    "fnr": 0.0026922276558110497,
+    "average_precision": 0.9996424723404763,
+    "pr_auc": 0.9996424723404763,
+    "confusion_matrix": {
+      "tn": 338616,
+      "fp": 640,
+      "fn": 207,
+      "tp": 76681
+    },
+    "fit_time_seconds": 0.0,
+    "predict_time_seconds": 0.0,
+    "latency_ms_per_1000": 0.0,
+    "sample_counts": {
+      "total": 416144,
+      "benign": 339256,
+      "attack": 76888
+    },
+    "per_class_recall": {
+      "BENIGN": {
+        "total": 339256,
+        "detected_correct": 338616,
+        "recall": 0.9981135189945056,
+        "recall_display": "99.81%",
+        "missed": 640,
+        "is_attack": false,
+        "uncertainty_warning": null
+      },
+      "Bot": {
+        "total": 289,
+        "detected_correct": 172,
+        "recall": 0.5951557093425606,
+        "recall_display": "59.52%",
+        "missed": 117,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DDoS": {
+        "total": 19305,
+        "detected_correct": 19282,
+        "recall": 0.9988085988085988,
+        "recall_display": "99.88%",
+        "missed": 23,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS GoldenEye": {
+        "total": 1581,
+        "detected_correct": 1572,
+        "recall": 0.9943074003795066,
+        "recall_display": "99.43%",
+        "missed": 9,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS Hulk": {
+        "total": 27679,
+        "detected_correct": 27645,
+        "recall": 0.9987716319231186,
+        "recall_display": "99.88%",
+        "missed": 34,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS Slowhttptest": {
+        "total": 812,
+        "detected_correct": 808,
+        "recall": 0.9950738916256158,
+        "recall_display": "99.51%",
+        "missed": 4,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS slowloris": {
+        "total": 807,
+        "detected_correct": 807,
+        "recall": 1.0,
+        "recall_display": "100.00%",
+        "missed": 0,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "FTP-Patator": {
+        "total": 1416,
+        "detected_correct": 1416,
+        "recall": 1.0,
+        "recall_display": "100.00%",
+        "missed": 0,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Heartbleed": {
+        "total": 1,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 1,
+        "is_attack": true,
+        "uncertainty_warning": "Warning: Based on 1 example(s); high estimation variance"
+      },
+      "Infiltration": {
+        "total": 3,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 3,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "PortScan": {
+        "total": 23897,
+        "detected_correct": 23893,
+        "recall": 0.9998326149725907,
+        "recall_display": "99.98%",
+        "missed": 4,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "SSH-Patator": {
+        "total": 773,
+        "detected_correct": 771,
+        "recall": 0.9974126778783958,
+        "recall_display": "99.74%",
+        "missed": 2,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Web Attack - Brute Force": {
+        "total": 230,
+        "detected_correct": 223,
+        "recall": 0.9695652173913043,
+        "recall_display": "96.96%",
+        "missed": 7,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Web Attack - Sql Injection": {
+        "total": 2,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 2,
+        "is_attack": true,
+        "uncertainty_warning": "Warning: Based on 2 example(s); high estimation variance"
+      },
+      "Web Attack - XSS": {
+        "total": 93,
+        "detected_correct": 92,
+        "recall": 0.989247311827957,
+        "recall_display": "98.92%",
+        "missed": 1,
+        "is_attack": true,
+        "uncertainty_warning": null
+      }
+    }
+  },
+  "metrics_at_default_0_50": {
+    "precision": 0.9960595503712112,
+    "recall": 0.9928597440432837,
+    "f1_score": 0.9944570732565183,
+    "accuracy": 0.9979550347956476,
+    "fpr": 0.0008901832244676587,
+    "fnr": 0.0071402559567162625,
+    "average_precision": 0.9996424723404763,
+    "pr_auc": 0.9996424723404763,
+    "confusion_matrix": {
+      "tn": 338954,
+      "fp": 302,
+      "fn": 549,
+      "tp": 76339
+    },
+    "fit_time_seconds": 0.0,
+    "predict_time_seconds": 0.0,
+    "latency_ms_per_1000": 0.0,
+    "sample_counts": {
+      "total": 416144,
+      "benign": 339256,
+      "attack": 76888
+    },
+    "per_class_recall": {
+      "BENIGN": {
+        "total": 339256,
+        "detected_correct": 338954,
+        "recall": 0.9991098167755323,
+        "recall_display": "99.91%",
+        "missed": 302,
+        "is_attack": false,
+        "uncertainty_warning": null
+      },
+      "Bot": {
+        "total": 289,
+        "detected_correct": 134,
+        "recall": 0.46366782006920415,
+        "recall_display": "46.37%",
+        "missed": 155,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DDoS": {
+        "total": 19305,
+        "detected_correct": 19270,
+        "recall": 0.9981869981869982,
+        "recall_display": "99.82%",
+        "missed": 35,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS GoldenEye": {
+        "total": 1581,
+        "detected_correct": 1548,
+        "recall": 0.9791271347248577,
+        "recall_display": "97.91%",
+        "missed": 33,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS Hulk": {
+        "total": 27679,
+        "detected_correct": 27543,
+        "recall": 0.9950865276924744,
+        "recall_display": "99.51%",
+        "missed": 136,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS Slowhttptest": {
+        "total": 812,
+        "detected_correct": 801,
+        "recall": 0.9864532019704434,
+        "recall_display": "98.65%",
+        "missed": 11,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "DoS slowloris": {
+        "total": 807,
+        "detected_correct": 779,
+        "recall": 0.9653035935563816,
+        "recall_display": "96.53%",
+        "missed": 28,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "FTP-Patator": {
+        "total": 1416,
+        "detected_correct": 1320,
+        "recall": 0.9322033898305084,
+        "recall_display": "93.22%",
+        "missed": 96,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Heartbleed": {
+        "total": 1,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 1,
+        "is_attack": true,
+        "uncertainty_warning": "Warning: Based on 1 example(s); high estimation variance"
+      },
+      "Infiltration": {
+        "total": 3,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 3,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "PortScan": {
+        "total": 23897,
+        "detected_correct": 23886,
+        "recall": 0.9995396911746244,
+        "recall_display": "99.95%",
+        "missed": 11,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "SSH-Patator": {
+        "total": 773,
+        "detected_correct": 763,
+        "recall": 0.9870633893919794,
+        "recall_display": "98.71%",
+        "missed": 10,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Web Attack - Brute Force": {
+        "total": 230,
+        "detected_correct": 206,
+        "recall": 0.8956521739130435,
+        "recall_display": "89.57%",
+        "missed": 24,
+        "is_attack": true,
+        "uncertainty_warning": null
+      },
+      "Web Attack - Sql Injection": {
+        "total": 2,
+        "detected_correct": 0,
+        "recall": 0.0,
+        "recall_display": "0.00%",
+        "missed": 2,
+        "is_attack": true,
+        "uncertainty_warning": "Warning: Based on 2 example(s); high estimation variance"
+      },
+      "Web Attack - XSS": {
+        "total": 93,
+        "detected_correct": 89,
+        "recall": 0.956989247311828,
+        "recall_display": "95.70%",
+        "missed": 4,
+        "is_attack": true,
+        "uncertainty_warning": null
+      }
+    }
+  },
+  "methodological_notes": {
+    "row_weighting": "Row-weighted metrics give higher influence to repeated flow feature vectors present in the benchmark.",
+    "unresolved_conflicts": "Conflicting label assignments across identical feature vectors remain unresolved in this offline benchmark.",
+    "live_network_disclaimer": "Benchmark held-out test performance evaluates offline flow classification on CICIDS2017 and does not constitute a guarantee of live-network operational effectiveness."
+  }
+}

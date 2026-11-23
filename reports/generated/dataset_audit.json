@@ -1,0 +1,1352 @@
+{
+  "audit_timestamp_utc": "2026-10-12T17:39:44.296051+00:00",
+  "elapsed_seconds": 472.91,
+  "total_files_inspected": 8,
+  "chunk_size": 25000,
+  "overall_summary": {
+    "total_rows": 2830743,
+    "benign_rows": 2273097,
+    "attack_rows": 557646,
+    "empty_or_missing_labels": 0,
+    "unique_feature_vectors": 2521664,
+    "excess_duplicate_features": 309079,
+    "excess_duplicate_records": 308381,
+    "conflicting_label_feature_vectors": 698,
+    "conflicting_label_rows": 7020,
+    "cross_file_feature_vectors": 34208,
+    "cross_file_rows": 146363
+  },
+  "duplicate_column_verification": {
+    "checked_pair": [
+      "Fwd Header Length (pos 34)",
+      "Fwd Header Length (pos 55)"
+    ],
+    "is_strictly_identical_across_all_rows": true,
+    "mismatch_count": 0
+  },
+  "headers_schema": [
+    {
+      "file_name": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Monday-WorkingHours.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    },
+    {
+      "file_name": "Wednesday-workingHours.pcap_ISCX.csv",
+      "column_count": 79,
+      "raw_duplicates": [
+        " Fwd Header Length"
+      ],
+      "stripped_duplicates": [
+        "Fwd Header Length"
+      ],
+      "duplicate_indices": {
+        "Fwd Header Length": [
+          34,
+          55
+        ]
+      }
+    }
+  ],
+  "constant_features": [
+    "Bwd PSH Flags",
+    "Bwd URG Flags",
+    "Fwd Avg Bytes/Bulk",
+    "Fwd Avg Packets/Bulk",
+    "Fwd Avg Bulk Rate",
+    "Bwd Avg Bytes/Bulk",
+    "Bwd Avg Packets/Bulk",
+    "Bwd Avg Bulk Rate"
+  ],
+  "within_file_duplicates": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 2633,
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 72353,
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": 6888,
+    "Monday-WorkingHours.pcap_ISCX.csv": 26935,
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 35630,
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 6066,
+    "Tuesday-WorkingHours.pcap_ISCX.csv": 24065,
+    "Wednesday-workingHours.pcap_ISCX.csv": 81957
+  },
+  "file_metrics": [
+    {
+      "file_name": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "file_id": 0,
+      "row_count": 225745,
+      "benign_count": 97718,
+      "attack_count": 128027,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 97718,
+        "DDoS": 128027
+      },
+      "stripped_label_counts": {
+        "BENIGN": 97718,
+        "DDoS": 128027
+      }
+    },
+    {
+      "file_name": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "file_id": 1,
+      "row_count": 286467,
+      "benign_count": 127537,
+      "attack_count": 158930,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 127537,
+        "PortScan": 158930
+      },
+      "stripped_label_counts": {
+        "BENIGN": 127537,
+        "PortScan": 158930
+      }
+    },
+    {
+      "file_name": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "file_id": 2,
+      "row_count": 191033,
+      "benign_count": 189067,
+      "attack_count": 1966,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 189067,
+        "Bot": 1966
+      },
+      "stripped_label_counts": {
+        "BENIGN": 189067,
+        "Bot": 1966
+      }
+    },
+    {
+      "file_name": "Monday-WorkingHours.pcap_ISCX.csv",
+      "file_id": 3,
+      "row_count": 529918,
+      "benign_count": 529918,
+      "attack_count": 0,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 529918
+      },
+      "stripped_label_counts": {
+        "BENIGN": 529918
+      }
+    },
+    {
+      "file_name": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "file_id": 4,
+      "row_count": 288602,
+      "benign_count": 288566,
+      "attack_count": 36,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 288566,
+        "Infiltration": 36
+      },
+      "stripped_label_counts": {
+        "BENIGN": 288566,
+        "Infiltration": 36
+      }
+    },
+    {
+      "file_name": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "file_id": 5,
+      "row_count": 170366,
+      "benign_count": 168186,
+      "attack_count": 2180,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 168186,
+        "Web Attack \ufffd Brute Force": 1507,
+        "Web Attack \ufffd XSS": 652,
+        "Web Attack \ufffd Sql Injection": 21
+      },
+      "stripped_label_counts": {
+        "BENIGN": 168186,
+        "Web Attack \ufffd Brute Force": 1507,
+        "Web Attack \ufffd XSS": 652,
+        "Web Attack \ufffd Sql Injection": 21
+      }
+    },
+    {
+      "file_name": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "file_id": 6,
+      "row_count": 445909,
+      "benign_count": 432074,
+      "attack_count": 13835,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 432074,
+        "FTP-Patator": 7938,
+        "SSH-Patator": 5897
+      },
+      "stripped_label_counts": {
+        "BENIGN": 432074,
+        "FTP-Patator": 7938,
+        "SSH-Patator": 5897
+      }
+    },
+    {
+      "file_name": "Wednesday-workingHours.pcap_ISCX.csv",
+      "file_id": 7,
+      "row_count": 692703,
+      "benign_count": 440031,
+      "attack_count": 252672,
+      "empty_label_count": 0,
+      "raw_label_counts": {
+        "BENIGN": 440031,
+        "DoS slowloris": 5796,
+        "DoS Slowhttptest": 5499,
+        "DoS Hulk": 231073,
+        "DoS GoldenEye": 10293,
+        "Heartbleed": 11
+      },
+      "stripped_label_counts": {
+        "BENIGN": 440031,
+        "DoS slowloris": 5796,
+        "DoS Slowhttptest": 5499,
+        "DoS Hulk": 231073,
+        "DoS GoldenEye": 10293,
+        "Heartbleed": 11
+      }
+    }
+  ],
+  "global_label_distribution": {
+    "BENIGN": 2273097,
+    "DDoS": 128027,
+    "PortScan": 158930,
+    "Bot": 1966,
+    "Infiltration": 36,
+    "Web Attack \ufffd Brute Force": 1507,
+    "Web Attack \ufffd XSS": 652,
+    "Web Attack \ufffd Sql Injection": 21,
+    "FTP-Patator": 7938,
+    "SSH-Patator": 5897,
+    "DoS slowloris": 5796,
+    "DoS Slowhttptest": 5499,
+    "DoS Hulk": 231073,
+    "DoS GoldenEye": 10293,
+    "Heartbleed": 11
+  },
+  "feature_statistics": [
+    {
+      "position": 0,
+      "name": "Destination Port",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 65535.0,
+      "is_constant": false
+    },
+    {
+      "position": 1,
+      "name": "Flow Duration",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -13.0,
+      "max_value": 119999998.0,
+      "is_constant": false
+    },
+    {
+      "position": 2,
+      "name": "Total Fwd Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 1.0,
+      "max_value": 219759.0,
+      "is_constant": false
+    },
+    {
+      "position": 3,
+      "name": "Total Backward Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 291922.0,
+      "is_constant": false
+    },
+    {
+      "position": 4,
+      "name": "Total Length of Fwd Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 12900000.0,
+      "is_constant": false
+    },
+    {
+      "position": 5,
+      "name": "Total Length of Bwd Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 655453030.0,
+      "is_constant": false
+    },
+    {
+      "position": 6,
+      "name": "Fwd Packet Length Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 24820.0,
+      "is_constant": false
+    },
+    {
+      "position": 7,
+      "name": "Fwd Packet Length Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 2325.0,
+      "is_constant": false
+    },
+    {
+      "position": 8,
+      "name": "Fwd Packet Length Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 5940.857143,
+      "is_constant": false
+    },
+    {
+      "position": 9,
+      "name": "Fwd Packet Length Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 7125.5968458437,
+      "is_constant": false
+    },
+    {
+      "position": 10,
+      "name": "Bwd Packet Length Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 19530.0,
+      "is_constant": false
+    },
+    {
+      "position": 11,
+      "name": "Bwd Packet Length Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 2896.0,
+      "is_constant": false
+    },
+    {
+      "position": 12,
+      "name": "Bwd Packet Length Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 5800.5,
+      "is_constant": false
+    },
+    {
+      "position": 13,
+      "name": "Bwd Packet Length Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 8194.660487,
+      "is_constant": false
+    },
+    {
+      "position": 14,
+      "name": "Flow Bytes/s",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 1358,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 1509,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2827876,
+      "min_value": -261000000.0,
+      "max_value": 2071000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 15,
+      "name": "Flow Packets/s",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 2867,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2827876,
+      "min_value": -2000000.0,
+      "max_value": 4000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 16,
+      "name": "Flow IAT Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -13.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 17,
+      "name": "Flow IAT Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 84800261.5664079,
+      "is_constant": false
+    },
+    {
+      "position": 18,
+      "name": "Flow IAT Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -13.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 19,
+      "name": "Flow IAT Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -14.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 20,
+      "name": "Fwd IAT Total",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 21,
+      "name": "Fwd IAT Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 22,
+      "name": "Fwd IAT Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 84602929.2769822,
+      "is_constant": false
+    },
+    {
+      "position": 23,
+      "name": "Fwd IAT Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 24,
+      "name": "Fwd IAT Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -12.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 25,
+      "name": "Bwd IAT Total",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 26,
+      "name": "Bwd IAT Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 27,
+      "name": "Bwd IAT Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 84418013.7826341,
+      "is_constant": false
+    },
+    {
+      "position": 28,
+      "name": "Bwd IAT Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 29,
+      "name": "Bwd IAT Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 30,
+      "name": "Fwd PSH Flags",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 31,
+      "name": "Bwd PSH Flags",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 32,
+      "name": "Fwd URG Flags",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 33,
+      "name": "Bwd URG Flags",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 34,
+      "name": "Fwd Header Length",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -32212234632.0,
+      "max_value": 4644908.0,
+      "is_constant": false
+    },
+    {
+      "position": 35,
+      "name": "Bwd Header Length",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -1073741320.0,
+      "max_value": 5838440.0,
+      "is_constant": false
+    },
+    {
+      "position": 36,
+      "name": "Fwd Packets/s",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 3000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 37,
+      "name": "Bwd Packets/s",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 2000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 38,
+      "name": "Min Packet Length",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1448.0,
+      "is_constant": false
+    },
+    {
+      "position": 39,
+      "name": "Max Packet Length",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 24820.0,
+      "is_constant": false
+    },
+    {
+      "position": 40,
+      "name": "Packet Length Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 3337.142857,
+      "is_constant": false
+    },
+    {
+      "position": 41,
+      "name": "Packet Length Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 4731.522394,
+      "is_constant": false
+    },
+    {
+      "position": 42,
+      "name": "Packet Length Variance",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 22400000.0,
+      "is_constant": false
+    },
+    {
+      "position": 43,
+      "name": "FIN Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 44,
+      "name": "SYN Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 45,
+      "name": "RST Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 46,
+      "name": "PSH Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 47,
+      "name": "ACK Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 48,
+      "name": "URG Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 49,
+      "name": "CWE Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 50,
+      "name": "ECE Flag Count",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "is_constant": false
+    },
+    {
+      "position": 51,
+      "name": "Down/Up Ratio",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 156.0,
+      "is_constant": false
+    },
+    {
+      "position": 52,
+      "name": "Average Packet Size",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 3893.333333,
+      "is_constant": false
+    },
+    {
+      "position": 53,
+      "name": "Avg Fwd Segment Size",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 5940.857143,
+      "is_constant": false
+    },
+    {
+      "position": 54,
+      "name": "Avg Bwd Segment Size",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 5800.5,
+      "is_constant": false
+    },
+    {
+      "position": 55,
+      "name": "Fwd Header Length",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -32212234632.0,
+      "max_value": 4644908.0,
+      "is_constant": false
+    },
+    {
+      "position": 56,
+      "name": "Fwd Avg Bytes/Bulk",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 57,
+      "name": "Fwd Avg Packets/Bulk",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 58,
+      "name": "Fwd Avg Bulk Rate",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 59,
+      "name": "Bwd Avg Bytes/Bulk",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 60,
+      "name": "Bwd Avg Packets/Bulk",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 61,
+      "name": "Bwd Avg Bulk Rate",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 0.0,
+      "is_constant": true
+    },
+    {
+      "position": 62,
+      "name": "Subflow Fwd Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 1.0,
+      "max_value": 219759.0,
+      "is_constant": false
+    },
+    {
+      "position": 63,
+      "name": "Subflow Fwd Bytes",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 12870338.0,
+      "is_constant": false
+    },
+    {
+      "position": 64,
+      "name": "Subflow Bwd Packets",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 291922.0,
+      "is_constant": false
+    },
+    {
+      "position": 65,
+      "name": "Subflow Bwd Bytes",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 655453030.0,
+      "is_constant": false
+    },
+    {
+      "position": 66,
+      "name": "Init_Win_bytes_forward",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -1.0,
+      "max_value": 65535.0,
+      "is_constant": false
+    },
+    {
+      "position": 67,
+      "name": "Init_Win_bytes_backward",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -1.0,
+      "max_value": 65535.0,
+      "is_constant": false
+    },
+    {
+      "position": 68,
+      "name": "act_data_pkt_fwd",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 213557.0,
+      "is_constant": false
+    },
+    {
+      "position": 69,
+      "name": "min_seg_size_forward",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": -536870661.0,
+      "max_value": 138.0,
+      "is_constant": false
+    },
+    {
+      "position": 70,
+      "name": "Active Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 110000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 71,
+      "name": "Active Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 74200000.0,
+      "is_constant": false
+    },
+    {
+      "position": 72,
+      "name": "Active Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 110000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 73,
+      "name": "Active Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 110000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 74,
+      "name": "Idle Mean",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 75,
+      "name": "Idle Std",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 76900000.0,
+      "is_constant": false
+    },
+    {
+      "position": 76,
+      "name": "Idle Max",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    },
+    {
+      "position": 77,
+      "name": "Idle Min",
+      "missing_or_blank_count": 0,
+      "nan_string_count": 0,
+      "invalid_numeric_count": 0,
+      "positive_infinity_count": 0,
+      "negative_infinity_count": 0,
+      "finite_numeric_count": 2830743,
+      "min_value": 0.0,
+      "max_value": 120000000.0,
+      "is_constant": false
+    }
+  ]
+}

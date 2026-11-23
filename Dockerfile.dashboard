@@ -1,0 +1,30 @@
+# Dockerfile for NIDS Streamlit Security Monitoring Dashboard
+# Explicit Python 3.11 slim base image
+FROM python:3.11-slim
+
+# Prevent Python from writing .pyc files and enable unbuffered logging
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Create non-root user and application directories
+RUN useradd -m -u 1000 appuser && \
+    mkdir -p /app/data /app/reports && \
+    chown -R appuser:appuser /app
+
+WORKDIR /app
+
+# Install Dashboard service dependencies
+COPY docker/requirements-dashboard.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source code with non-root ownership
+COPY --chown=appuser:appuser app /app/app
+
+# Switch to non-root user
+USER appuser
+
+# Dashboard listens on 0.0.0.0:8501 inside container; usage stats disabled
+EXPOSE 8501
+
+CMD ["streamlit", "run", "app/dashboard/main.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--browser.gatherUsageStats", "false"]

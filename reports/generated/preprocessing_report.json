@@ -1,0 +1,572 @@
+{
+  "pipeline_timestamp_utc": "2026-10-12T18:31:33.948561+00:00",
+  "elapsed_seconds": 1336.01,
+  "configuration": {
+    "seed": 42,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "chunk_size": 25000,
+    "shard_size": 100000,
+    "model_features_count": 77
+  },
+  "overall_counts": {
+    "total_input_rows": 2830743,
+    "total_valid_rows_emitted": 2830743,
+    "total_rejected_rows": 0,
+    "verification_row_balance_exact": true
+  },
+  "partition_distribution": {
+    "train_rows": 1997204,
+    "train_pct": 70.55,
+    "validation_rows": 417395,
+    "validation_pct": 14.75,
+    "test_rows": 416144,
+    "test_pct": 14.7
+  },
+  "disjointness_verification": {
+    "is_strictly_disjoint": true,
+    "train_val_collisions": 0,
+    "train_test_collisions": 0,
+    "val_test_collisions": 0
+  },
+  "cleaning_anomalies_counts": {
+    "nan_strings_converted": 0,
+    "infinities_converted": 4376,
+    "negative_flow_bytes_converted": 85,
+    "negative_flow_packets_converted": 115,
+    "invalid_numerics_converted": 1358
+  },
+  "reconciliation_notes": {
+    "infinities_reconciliation": "The initial preprocessing report recorded 8,752 infinity conversions due to a counter double-increment (both string pattern match and post-numeric isinf check). The actual number of distinct feature cells converted from infinity to missing values is exactly 4,376 (1,509 in Flow Bytes/s + 2,867 in Flow Packets/s), which precisely reconciles with the audit baseline. Shard feature data was unaffected because the underlying replacement was idempotent."
+  },
+  "class_coverage_by_partition": {
+    "train": {
+      "BENIGN": 1593763,
+      "DDoS": 89544,
+      "PortScan": 111174,
+      "Bot": 1384,
+      "Infiltration": 27,
+      "Web Attack - Brute Force": 1040,
+      "Web Attack - XSS": 469,
+      "Web Attack - Sql Injection": 16,
+      "FTP-Patator": 5368,
+      "SSH-Patator": 4157,
+      "DoS slowloris": 4097,
+      "DoS Slowhttptest": 3853,
+      "DoS Hulk": 175183,
+      "DoS GoldenEye": 7120,
+      "Heartbleed": 9
+    },
+    "validation": {
+      "BENIGN": 340078,
+      "DDoS": 19178,
+      "PortScan": 23859,
+      "Bot": 293,
+      "Infiltration": 6,
+      "Web Attack - Brute Force": 237,
+      "Web Attack - XSS": 90,
+      "Web Attack - Sql Injection": 3,
+      "FTP-Patator": 1154,
+      "SSH-Patator": 967,
+      "DoS slowloris": 892,
+      "DoS Slowhttptest": 834,
+      "DoS Hulk": 28211,
+      "DoS GoldenEye": 1592,
+      "Heartbleed": 1
+    },
+    "test": {
+      "BENIGN": 339256,
+      "DDoS": 19305,
+      "PortScan": 23897,
+      "Bot": 289,
+      "Infiltration": 3,
+      "Web Attack - Brute Force": 230,
+      "Web Attack - XSS": 93,
+      "Web Attack - Sql Injection": 2,
+      "FTP-Patator": 1416,
+      "SSH-Patator": 773,
+      "DoS slowloris": 807,
+      "DoS Slowhttptest": 812,
+      "DoS Hulk": 27679,
+      "DoS GoldenEye": 1581,
+      "Heartbleed": 1
+    }
+  },
+  "binary_counts_by_partition": {
+    "train": {
+      "0": 1593763,
+      "1": 403441
+    },
+    "validation": {
+      "0": 340078,
+      "1": 77317
+    },
+    "test": {
+      "0": 339256,
+      "1": 76888
+    }
+  },
+  "disk_usage": {
+    "total_shards": 41,
+    "total_compressed_bytes": 401391862,
+    "total_compressed_mb": 382.8
+  },
+  "per_file_summaries": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+      "file_name": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "elapsed_seconds": 103.71,
+      "rows_inspected": 225745,
+      "valid_rows_emitted": 225745,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 158019,
+        "validation": 33830,
+        "test": 33896
+      },
+      "shards": [
+        {
+          "filename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 13873224,
+          "sha256": "cb9487c5da2333194b9f9deeea17d07eb5e65e7489a81d6bd6bf90ad073cd8c6"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 58019,
+          "size_bytes": 7977315,
+          "sha256": "bb5d3b397d676bae822538c0e201d2b0952cdbd5919096dc4d2c2daa40b417b8"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 33830,
+          "size_bytes": 4896650,
+          "sha256": "da8b27438ae62e1ef6e73f0dc5bb2921b22e7655995dd0fc1ace54f5beb45af9"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 33896,
+          "size_bytes": 4910900,
+          "sha256": "f890ac21aac53e1008c6a869edafdc1f7ff5b6f0b9d9ba6e32a045e073daf684"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 128,
+        "negative_flow_bytes_converted": 2,
+        "negative_flow_packets_converted": 2,
+        "invalid_numerics_converted": 4
+      }
+    },
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+      "file_name": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "elapsed_seconds": 105.78,
+      "rows_inspected": 286467,
+      "valid_rows_emitted": 286467,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 200385,
+        "validation": 43307,
+        "test": 42775
+      },
+      "shards": [
+        {
+          "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 11544815,
+          "sha256": "78b803fdb74e023ae950662a1b2ac3486ba264d7243c7986b7c4020c0098e522"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 8738893,
+          "sha256": "068cddc0b9a5679c48de34a1cd00ecad3d60be6089f487bfedcb55d298384ff5"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_train_shard_0002.csv.gz",
+          "partition": "train",
+          "rows": 385,
+          "size_bytes": 39512,
+          "sha256": "2af6b82b90060a70c9e2c1b5470cebc2c924cefd1b1e4061a9bf42ed2d19ccc6"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 43307,
+          "size_bytes": 4524117,
+          "sha256": "6a00663f0b87442523f5f56af0b27479621c53e7b9d17a16cad35bab085c2f24"
+        },
+        {
+          "filename": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 42775,
+          "size_bytes": 4456609,
+          "sha256": "d59ce9d6603be8304b5a997d49e0dfde9cc072c66d288a4601cae070633dbb3b"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 1454,
+        "negative_flow_bytes_converted": 36,
+        "negative_flow_packets_converted": 36,
+        "invalid_numerics_converted": 15
+      }
+    },
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+      "file_name": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "elapsed_seconds": 80.22,
+      "rows_inspected": 191033,
+      "valid_rows_emitted": 191033,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 133771,
+        "validation": 28655,
+        "test": 28607
+      },
+      "shards": [
+        {
+          "filename": "Friday-WorkingHours-Morning.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 14576327,
+          "sha256": "9d3af44f9a33e828dd587b4d56eb5328605cf481cc7545f46518accdf7a303a6"
+        },
+        {
+          "filename": "Friday-WorkingHours-Morning.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 33771,
+          "size_bytes": 4918477,
+          "sha256": "916e8dbfc065a98a63281c523c5f05a9305883eede4455a8d0abbe6647c4448a"
+        },
+        {
+          "filename": "Friday-WorkingHours-Morning.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 28655,
+          "size_bytes": 4318251,
+          "sha256": "d19507591803c55b77cbebe459b2ef33fe83e666e46850c44c4196fc2b2e5d80"
+        },
+        {
+          "filename": "Friday-WorkingHours-Morning.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 28607,
+          "size_bytes": 4338352,
+          "sha256": "76f1a28ba2371c3a48f375ecf67c018dbacb487f760c3fd4d105c0a68919b7e3"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 432,
+        "negative_flow_bytes_converted": 8,
+        "negative_flow_packets_converted": 9,
+        "invalid_numerics_converted": 28
+      }
+    },
+    "Monday-WorkingHours.pcap_ISCX.csv": {
+      "file_name": "Monday-WorkingHours.pcap_ISCX.csv",
+      "elapsed_seconds": 231.65,
+      "rows_inspected": 529918,
+      "valid_rows_emitted": 529918,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 372560,
+        "validation": 78591,
+        "test": 78767
+      },
+      "shards": [
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 17729541,
+          "sha256": "a38c9de041beaee8cc5f7f342521bb80c9d2bbbb90615910d32a4552367329a1"
+        },
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 17525576,
+          "sha256": "ef12a535085cb668ebcbd505795b4fa580a6f5cde037fc46233c7560b491f18b"
+        },
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_train_shard_0002.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 14720117,
+          "sha256": "fe726b92c026765c69beaec11b1dd924322a448e033832ba1db349dacacf0c4d"
+        },
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_train_shard_0003.csv.gz",
+          "partition": "train",
+          "rows": 72560,
+          "size_bytes": 9454056,
+          "sha256": "32b810c26bae07e40f2a604b135b06e857f39ffa7e9f042f64b93e498ad39a58"
+        },
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 78591,
+          "size_bytes": 12904180,
+          "sha256": "68f380540e7f2a5c110eb45c208d64f8f657d38d604cadbbb4acc79edeeaf75d"
+        },
+        {
+          "filename": "Monday-WorkingHours.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 78767,
+          "size_bytes": 12896897,
+          "sha256": "d5173811f4b1c03a0b79faabbb09692a6dcdbb5243b4a88436a8ac6ac77de2f5"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 1620,
+        "negative_flow_bytes_converted": 9,
+        "negative_flow_packets_converted": 15,
+        "invalid_numerics_converted": 64
+      }
+    },
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+      "file_name": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "elapsed_seconds": 129.86,
+      "rows_inspected": 288602,
+      "valid_rows_emitted": 288602,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 201922,
+        "validation": 43894,
+        "test": 42786
+      },
+      "shards": [
+        {
+          "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 13460041,
+          "sha256": "4d878691b60f3537c0adcabd889d6da3274cfbbbf754de37acf177e4ef25c628"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 11983475,
+          "sha256": "bb6950641dfe0915de893086da3895cc789ae98129402f319539669098a93455"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_train_shard_0002.csv.gz",
+          "partition": "train",
+          "rows": 1922,
+          "size_bytes": 260220,
+          "sha256": "3cffb393083bd1a7430af23dd3de81e765e2ab0cc0bd37766074352855a2a2ef"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 43894,
+          "size_bytes": 5691930,
+          "sha256": "1c9e0d9da49b1603a73b54f05f562612ec33bab9c61242d3bc9fc2d7d83a545f"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 42786,
+          "size_bytes": 5667734,
+          "sha256": "39b0f1c210f0910d853c9496638d0aa876a857c29b47b75c009566b212fddd5b"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 792,
+        "negative_flow_bytes_converted": 4,
+        "negative_flow_packets_converted": 4,
+        "invalid_numerics_converted": 18
+      }
+    },
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+      "file_name": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "elapsed_seconds": 79.48,
+      "rows_inspected": 170366,
+      "valid_rows_emitted": 170366,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 119580,
+        "validation": 25552,
+        "test": 25234
+      },
+      "shards": [
+        {
+          "filename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 14663217,
+          "sha256": "8382ed74261709e254665bf3b4dec6ffe7fd2746bca3eaf442c6c9d2b92f847e"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 19580,
+          "size_bytes": 2864681,
+          "sha256": "88cc0a10ad59e980caabc455af80c11434ff161fea6c0fffb0af7cda81c7cfcc"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 25552,
+          "size_bytes": 3866923,
+          "sha256": "b68590ae78f6780096fc642a0bf173beb8d0d7cff7a557b44c94adba14adbfb0"
+        },
+        {
+          "filename": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 25234,
+          "size_bytes": 3846816,
+          "sha256": "8b152fbfa950c5d08f939397b3d22965da9708546b5c19620dd6465ec935a2ce"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 500,
+        "negative_flow_bytes_converted": 10,
+        "negative_flow_packets_converted": 11,
+        "invalid_numerics_converted": 20
+      }
+    },
+    "Tuesday-WorkingHours.pcap_ISCX.csv": {
+      "file_name": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "elapsed_seconds": 206.18,
+      "rows_inspected": 445909,
+      "valid_rows_emitted": 445909,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 311284,
+        "validation": 66616,
+        "test": 68009
+      },
+      "shards": [
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 16182617,
+          "sha256": "5ab494eaeda06e4317382b7f41646e40bb4e1d2aa458ee13d3f6f96dd341ca2c"
+        },
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 15720320,
+          "sha256": "596674331368a7d5463249fd297831850932fc34412d6ab3da008fc61a789473"
+        },
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_train_shard_0002.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 12371860,
+          "sha256": "3402853eb432960c2e00475da130549fce876a1d215715853abf2ffafebd4edf"
+        },
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_train_shard_0003.csv.gz",
+          "partition": "train",
+          "rows": 11284,
+          "size_bytes": 1405197,
+          "sha256": "23887e825089c2ba9c2a4f496581ff9d95ca7467e0770a80ae4fdb2a494b99ef"
+        },
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 66616,
+          "size_bytes": 9937780,
+          "sha256": "54b1592ad080a7701dee068078aec79fd323139e58ebfd709e0db05e635cec8b"
+        },
+        {
+          "filename": "Tuesday-WorkingHours.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 68009,
+          "size_bytes": 9955496,
+          "sha256": "d74bc56630a31eb7a7afce53a37e23559a14f55676d1e063ee68563b3f7f7ef8"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 654,
+        "negative_flow_bytes_converted": 0,
+        "negative_flow_packets_converted": 17,
+        "invalid_numerics_converted": 201
+      }
+    },
+    "Wednesday-workingHours.pcap_ISCX.csv": {
+      "file_name": "Wednesday-workingHours.pcap_ISCX.csv",
+      "elapsed_seconds": 309.84,
+      "rows_inspected": 692703,
+      "valid_rows_emitted": 692703,
+      "rejected_rows_count": 0,
+      "split_counts": {
+        "train": 499683,
+        "validation": 96950,
+        "test": 96070
+      },
+      "shards": [
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_train_shard_0000.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 14628837,
+          "sha256": "bc3fabd7d6539b01d100ad6197179df3ff882298479e51a76aeb3f4e00839d32"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_train_shard_0001.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 12529052,
+          "sha256": "7efdb887fede36715842efba8c65e6201ce45b4a9526e1e4637b364fcd75bd69"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_train_shard_0002.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 14296427,
+          "sha256": "d5ee0f89310d728870570c53c0239f7fadc51ed3a8b2a6b85414296454b174e0"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_train_shard_0003.csv.gz",
+          "partition": "train",
+          "rows": 100000,
+          "size_bytes": 15064262,
+          "sha256": "574c3ace02f4329d6dca90c4235baa5a208de125e1cd59be3099c10fc7da8683"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_train_shard_0004.csv.gz",
+          "partition": "train",
+          "rows": 99683,
+          "size_bytes": 12755600,
+          "sha256": "be1cb1033ff1c3e6e9b1419c6c9c5c0649442982299171ded8aa6edf8abc9df3"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_validation_shard_0000.csv.gz",
+          "partition": "validation",
+          "rows": 96950,
+          "size_bytes": 14958256,
+          "sha256": "799d16b90f87647aa488e6e6d24cb89ff421f69acf9247585d6fb3ca903b75c9"
+        },
+        {
+          "filename": "Wednesday-workingHours.pcap_ISCX_test_shard_0000.csv.gz",
+          "partition": "test",
+          "rows": 96070,
+          "size_bytes": 14937312,
+          "sha256": "9c1b4126c93dd0c48cd6194fde1a8dc6b39b0f98d8b8d54966deda0b286dbff2"
+        }
+      ],
+      "cleaning_anomalies": {
+        "nan_strings_converted": 0,
+        "infinities_converted": 3172,
+        "negative_flow_bytes_converted": 16,
+        "negative_flow_packets_converted": 21,
+        "invalid_numerics_converted": 1008
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "model_name": "Random Forest (100 trees, depth=18, min_leaf=2, jobs=2)",
+  "model_type": "random_forest",
+  "training_timestamp_utc": "2026-10-12T18:52:05.485286+00:00",
+  "random_seed": 42,
+  "selection_criteria": "Validation ATTACK F1-score (tie-breaker: lower FPR)",
+  "train_samples": 150000,
+  "validation_samples": 50000,
+  "feature_count": 77,
+  "feature_names": [
+    "Destination Port",
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "Fwd Packet Length Max",
+    "Fwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Std",
+    "Bwd Packet Length Max",
+    "Bwd Packet Length Min",
+    "Bwd Packet Length Mean",
+    "Bwd Packet Length Std",
+    "Flow Bytes/s",
+    "Flow Packets/s",
+    "Flow IAT Mean",
+    "Flow IAT Std",
+    "Flow IAT Max",
+    "Flow IAT Min",
+    "Fwd IAT Total",
+    "Fwd IAT Mean",
+    "Fwd IAT Std",
+    "Fwd IAT Max",
+    "Fwd IAT Min",
+    "Bwd IAT Total",
+    "Bwd IAT Mean",
+    "Bwd IAT Std",
+    "Bwd IAT Max",
+    "Bwd IAT Min",
+    "Fwd PSH Flags",
+    "Bwd PSH Flags",
+    "Fwd URG Flags",
+    "Bwd URG Flags",
+    "Fwd Header Length",
+    "Bwd Header Length",
+    "Fwd Packets/s",
+    "Bwd Packets/s",
+    "Min Packet Length",
+    "Max Packet Length",
+    "Packet Length Mean",
+    "Packet Length Std",
+    "Packet Length Variance",
+    "FIN Flag Count",
+    "SYN Flag Count",
+    "RST Flag Count",
+    "PSH Flag Count",
+    "ACK Flag Count",
+    "URG Flag Count",
+    "CWE Flag Count",
+    "ECE Flag Count",
+    "Down/Up Ratio",
+    "Average Packet Size",
+    "Avg Fwd Segment Size",
+    "Avg Bwd Segment Size",
+    "Fwd Avg Bytes/Bulk",
+    "Fwd Avg Packets/Bulk",
+    "Fwd Avg Bulk Rate",
+    "Bwd Avg Bytes/Bulk",
+    "Bwd Avg Packets/Bulk",
+    "Bwd Avg Bulk Rate",
+    "Subflow Fwd Packets",
+    "Subflow Fwd Bytes",
+    "Subflow Bwd Packets",
+    "Subflow Bwd Bytes",
+    "Init_Win_bytes_forward",
+    "Init_Win_bytes_backward",
+    "act_data_pkt_fwd",
+    "min_seg_size_forward",
+    "Active Mean",
+    "Active Std",
+    "Active Max",
+    "Active Min",
+    "Idle Mean",
+    "Idle Std",
+    "Idle Max",
+    "Idle Min"
+  ],
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 18,
+    "min_samples_leaf": 2,
+    "n_jobs": 2
+  },
+  "metrics_validation": {
+    "precision": 0.9954278249510125,
+    "recall": 0.9951028403525954,
+    "f1_score": 0.995265306122449,
+    "accuracy": 0.99826,
+    "fpr": 0.0010291343020264144,
+    "fnr": 0.004897159647404506,
+    "pr_auc": 0.9994565717667434,
+    "confusion_matrix": {
+      "tn": 40769,
+      "fp": 42,
+      "fn": 45,
+      "tp": 9144
+    },
+    "fit_time_seconds": 38.986480599998686,
+    "predict_time_seconds": 0.3746974000005139,
+    "latency_ms_per_1000": 7.493948000010278,
+    "sample_counts": {
+      "total": 50000,
+      "benign": 40811,
+      "attack": 9189
+    },
+    "per_class_recall": {
+      "BENIGN": {
+        "total": 40811,
+        "detected_correct": 40769,
+        "recall": 0.9989708656979736,
+        "missed": 42,
+        "is_attack": false
+      },
+      "Bot": {
+        "total": 35,
+        "detected_correct": 13,
+        "recall": 0.37142857142857144,
+        "missed": 22,
+        "is_attack": true
+      },
+      "DDoS": {
+        "total": 2311,
+        "detected_correct": 2311,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      },
+      "DoS GoldenEye": {
+        "total": 172,
+        "detected_correct": 168,
+        "recall": 0.9767441860465116,
+        "missed": 4,
+        "is_attack": true
+      },
+      "DoS Hulk": {
+        "total": 3339,
+        "detected_correct": 3327,
+        "recall": 0.9964061096136568,
+        "missed": 12,
+        "is_attack": true
+      },
+      "DoS Slowhttptest": {
+        "total": 102,
+        "detected_correct": 99,
+        "recall": 0.9705882352941176,
+        "missed": 3,
+        "is_attack": true
+      },
+      "DoS slowloris": {
+        "total": 101,
+        "detected_correct": 101,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      },
+      "FTP-Patator": {
+        "total": 131,
+        "detected_correct": 131,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      },
+      "PortScan": {
+        "total": 2844,
+        "detected_correct": 2844,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      },
+      "SSH-Patator": {
+        "total": 109,
+        "detected_correct": 108,
+        "recall": 0.9908256880733946,
+        "missed": 1,
+        "is_attack": true
+      },
+      "Web Attack - Brute Force": {
+        "total": 36,
+        "detected_correct": 33,
+        "recall": 0.9166666666666666,
+        "missed": 3,
+        "is_attack": true
+      },
+      "Web Attack - Sql Injection": {
+        "total": 2,
+        "detected_correct": 2,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      },
+      "Web Attack - XSS": {
+        "total": 7,
+        "detected_correct": 7,
+        "recall": 1.0,
+        "missed": 0,
+        "is_attack": true
+      }
+    }
+  },
+  "git_commit": "uncommitted",
+  "environment": {
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "win32"
+  }
+}
